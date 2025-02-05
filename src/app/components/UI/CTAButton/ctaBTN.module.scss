@@ -1,0 +1,42 @@
+/** @format */
+@use '@styles/mixin' as *;
+@use '@styles/variable' as *;
+@use '@styles/global' as *;
+
+.button-wrapper {
+    border: 1px solid $white-alfa-1;
+    border-radius: $s-size-2;
+    background: $dark-space;
+    position: relative;
+    padding: $s-size $m-size-2;
+    @include transition(background, 0.4s, ease-in-out);
+    @include size(163px, 46px);
+    @include flex(center, center);
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $night-blue;
+        z-index: 1;
+        border-radius: inherit;
+        @include size(0%, 100%);
+        @include transition(width, 0.4s, ease-in-out);
+    }
+    &:hover::before {
+        width: 100%;
+    }
+
+    .button {
+        text-decoration: none;
+        color: $white;
+        position: relative;
+        z-index: 2;
+        @include flex(center, center);
+        @include textFont($b-weight, $s-size);
+
+        .icon {
+            margin-left: $s-size-2;
+            font-size: $s-size;
+        }
+    }
+}

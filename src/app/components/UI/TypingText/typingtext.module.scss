@@ -1,0 +1,35 @@
+/** @format */
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+
+.typing {
+    margin-top: 1.5rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    @include textFont(400, 1.5rem);
+    height: 2.063rem;
+
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        height: 24px;
+        background-color: $white;
+        margin-left: 5px;
+        transition: opacity 0.3s ease;
+        animation: blink 0.8s infinite step-start;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

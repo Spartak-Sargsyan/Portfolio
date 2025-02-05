@@ -1,0 +1,23 @@
+/** @format */
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+
+.tech-stack {
+    @include textFont($n-weight, $s-size);
+    padding: $s-size-2 $n-size;
+    display: none;
+    border-radius: 25px;
+    background: $white-alfa-1;
+    backdrop-filter: blur(5px);
+    border: 1px solid;
+    cursor: default;
+    color: $ice-gray;
+    transition: background-color 0.4s ease-in-out;
+
+    @media (min-width: 640px) {
+        display: block;
+    }
+    &:hover {
+        background: $white-alfa-1;
+    }
+}

@@ -1,0 +1,17 @@
+/** @format */
+
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+
+.line {
+    background-color: $gray;
+    opacity: 0.3;
+}
+
+.copyright {
+    @include flex(center, center);
+    @include textFont($n-weight, $s-size);
+    color: $gray;
+    padding: 20px 0;
+    line-height: 1.25rem;
+}

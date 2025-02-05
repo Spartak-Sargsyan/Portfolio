@@ -1,0 +1,44 @@
+/** @format */
+@use 'variable' as *;
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin star($color) {
+    color: $color;
+}
+
+@mixin shadow(
+    $use-inset: false,
+    $color: $border-color2,
+    $blur: 20px,
+    $spread: 3px
+) {
+    $shadow-type: if($use-inset, inset, null);
+    box-shadow:
+        #{$shadow-type} 0px 0px #{$blur} #{$spread} #{$color},
+        0px 0px #{$blur} #{$spread} #{$color};
+}
+
+@mixin gradientText($gradient) {
+    color: transparent;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@mixin textFont($weight, $size, $family: $font) {
+    font: $weight $size $family;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+
+@mixin transition($name, $sec, $type){
+    transition: $name $sec $type;
+}

@@ -1,0 +1,9 @@
+/** @format */
+
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+
+.header {
+    @include flex(space-between, center);
+    padding: 20px 0;
+}

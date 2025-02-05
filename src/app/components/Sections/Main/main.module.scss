@@ -1,0 +1,123 @@
+/** @format */
+
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+@use '@styles/global' as *;
+
+.main-wrapper {
+    @include flex(space-between, center);
+    height: 80vh;
+}
+
+.lottie-animation {
+    position: relative;
+    right: -8.5rem;
+    // width: 1020px;
+    // height: 510px;
+    @include size(1020px,510px);
+    @include transition(transform, 0.4s, ease-in-out);
+    &:hover {
+        transform: scale(1.05) rotate(5deg);
+    }
+}
+
+.heading {
+    @include textFont($b-weight, $m-size);
+    color: $white;
+    text-transform: uppercase;
+    width: min-content;
+    line-height: $xl-size;
+    margin-top: 30px;
+    letter-spacing: 3.5px;
+    position: relative;
+
+    @media (min-width: 640px) {
+        font-size: $xm-size;
+    }
+    @media (min-width: 768px) {
+        font-size: $l-size;
+    }
+    @media (min-width: 1280px) {
+        font-size: $xl-size;
+    }
+
+    .headingLine {
+        position: relative;
+        display: inline-block;
+        margin-top: $s-size-2;
+
+        .headingBg {
+            position: absolute;
+            inset: -0.5rem;
+            background: $gradient;
+            filter: blur(20px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+    }
+
+    .headingWord {
+        position: relative;
+
+        &.whiteText {
+            color: $white;
+        }
+
+        &.gradientText {
+            @include gradientText($gradient);
+        }
+    }
+}
+
+.badge-group {
+    display: inline-flex;
+    position: relative;
+
+    .badge-content {
+        padding: $s-size-2 $n-size;
+        border-radius: 25px;
+        background: $black-alfa-4;
+        backdrop-filter: blur(10px);
+        border: 1px solid $white-alfa-1;
+
+        @media (min-width: 640px) {
+            padding: $s-size-2 $xs-size-2;
+        }
+
+        .badge-text {
+            @include gradientText($gradient);
+            @include textFont($m-weight, $s-size);
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 640px) {
+                @include textFont($m-weight, $s-size);
+            }
+
+            .icon {
+                @include size($s-size, $s-size);
+                margin-right: $s-size-2;
+                color: $sky-blue;
+
+                @media (min-width: 640px) {
+                    @include size($n-size, $n-size);
+                }
+            }
+        }
+    }
+}
+
+.description {
+    @include textFont($l-weight, $n-size);
+    color: $gray;
+    max-width: 36rem;
+    line-height: 1.625;
+    margin-top: $xs-size-2;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: $xs-size-2;
+}

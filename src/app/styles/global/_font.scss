@@ -1,0 +1,14 @@
+/** @format */
+@use 'variable' as *;
+
+@each $font, $weight in $fonts {
+    @font-face {
+        font-family: 'Poppins';
+        src:
+            url('#{$path-font}#{$font}.woff2') format('woff2'),
+            url('#{$path-font}#{$font}.woff') format('woff');
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}

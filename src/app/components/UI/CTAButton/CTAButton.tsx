@@ -1,12 +1,12 @@
 /** @format */
 
-import styles from './ctaBTN.module.scss'
-import Link from 'next/link'
+import styles from './ctaBTN.module.scss';
+import Link from 'next/link';
 
 interface ICTABtnProps {
-    href: string
-    text: string
-    icon: React.FC<React.SVGProps<SVGAElement>>
+    href: string;
+    text: string;
+    icon: React.FC<React.SVGProps<SVGAElement>>;
 }
 
 const CTAButton: React.FC<ICTABtnProps> = ({ href, text, icon: Icon }) => (
@@ -17,6 +17,6 @@ const CTAButton: React.FC<ICTABtnProps> = ({ href, text, icon: Icon }) => (
             <Icon className={styles.icon} />
         </Link>
     </div>
-)
+);
 
-export default CTAButton
+export default CTAButton;

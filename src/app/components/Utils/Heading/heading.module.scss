@@ -1,0 +1,10 @@
+/** @format */
+
+@use '@styles/mixin' as *;
+@use '@styles/variable' as *;
+
+.heading {
+    text-transform: capitalize;
+    @include textFont($b-weight, $m-size-2);
+    @include gradientText;
+}

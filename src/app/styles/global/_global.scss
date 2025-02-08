@@ -1,5 +1,6 @@
 /** @format */
 @use '@styles/variable' as *;
+@use '@styles/mixin' as *;
 
 .background-shadow {
     position: absolute;
@@ -10,4 +11,9 @@
     opacity: 0.3;
     z-index: -1;
     transition: opacity 0.4s ease-in-out;
+}
+
+.head {
+    @include flex(center, center);
+    flex-direction: column;
 }

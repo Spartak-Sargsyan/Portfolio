@@ -14,22 +14,25 @@ $white: #fff;
 $white-alfa-1: rgba(255, 255, 255, 0.1);
 $sky-blue: #60a5fa;
 $night-blue: #131038;
-$deep-indigo:#161132;
+$deep-indigo: #161132;
 $ice-gray: #d1d5db;
 $misty-gray: rgba(84, 84, 84, 0.1);
 $gray: #9ca3af;
 $dark-space: #030014;
 $black-alfa-4: rgba(0, 0, 0, 0.4);
-$gradient: linear-gradient(to right, #6366f1, #a855f7);
+$lilac: #c084fc;
+$purple: #a855f7;
+$gradient: linear-gradient(to right, #6366f1, #a855f7 100px);
 
 //size
 $xl-size: 4.5rem;
 $l-size: 4rem;
 $xm-size: 3.75rem;
 $m-size: 3rem;
-$m-size-2:2.5rem;
+$m-size-2: 2.5rem;
 $xs-size: 1.3rem;
 $xs-size-2: 1.5rem;
+$xs-size-3: 1.875rem;
 $n-size: 1rem;
 $s-size: 0.875rem;
 $s-size-2: 0.5rem;
@@ -39,5 +42,3 @@ $l-weight: 300;
 $n-weight: 400;
 $m-weight: 500;
 $b-weight: 700;
-
-

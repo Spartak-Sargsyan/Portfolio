@@ -3,26 +3,18 @@
 
 @mixin flex($justify, $align) {
     display: flex;
-    justify-content: $justify;
-    align-items: $align;
+    @if $justify != null {
+        justify-content: $justify;
+    }
+    @if $align != null {
+        align-items: $align;
+    }
 }
-@mixin star($color) {
+@mixin icon($color) {
     color: $color;
 }
 
-@mixin shadow(
-    $use-inset: false,
-    $color: $border-color2,
-    $blur: 20px,
-    $spread: 3px
-) {
-    $shadow-type: if($use-inset, inset, null);
-    box-shadow:
-        #{$shadow-type} 0px 0px #{$blur} #{$spread} #{$color},
-        0px 0px #{$blur} #{$spread} #{$color};
-}
-
-@mixin gradientText($gradient) {
+@mixin gradientText {
     color: transparent;
     background: $gradient;
     background-clip: text;
@@ -38,7 +30,6 @@
     height: $h;
 }
 
-
-@mixin transition($name, $sec, $type){
+@mixin transition($name, $sec, $type) {
     transition: $name $sec $type;
 }

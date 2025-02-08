@@ -1,0 +1,22 @@
+/** @format */
+
+@use '@styles/mixin' as *;
+@use '@styles/variable' as *;
+
+.paragraph {
+    @include textFont($n-weight, $n-size);
+    @include flex(null, center);
+    color: $gray;
+    line-height: $xs-size-2;
+
+    .icon {
+        @include icon($lilac);
+
+        &:last-child {
+            margin-left: $s-size-2;
+        }
+        &:first-child {
+            margin-right: $s-size-2;
+        }
+    }
+}

@@ -8,7 +8,7 @@ import styles from './Header.module.scss'
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Image src={logo} alt='logo' width={50} height={50} priority />
+            <Image src={logo} alt='logo' width={70} height={70} priority />
             <NavBar />
         </header>
     )

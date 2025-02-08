@@ -32,7 +32,7 @@
         position: relative;
         z-index: 2;
         @include flex(center, center);
-        @include textFont($b-weight, $s-size);
+        @include textFont($b-weight, $n-size);
 
         .icon {
             margin-left: $s-size-2;

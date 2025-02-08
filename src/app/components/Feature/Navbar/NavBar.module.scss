@@ -33,7 +33,7 @@
             width: 100%;
         }
         &.active {
-            @include gradientText($gradient);
+            @include gradientText;
         }
     }
 }

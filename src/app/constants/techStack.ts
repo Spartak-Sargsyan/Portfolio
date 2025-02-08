@@ -35,17 +35,17 @@ export const CTA: ICTA[] = [
 export const SOCIAL: ISocial[] = [
     {
         id: 1,
-        link: 'github.com/Spartak-Sargsyan',
+        link: 'https://www.github.com/Spartak-Sargsyan',
         icon: LuGithub,
     },
     {
         id: 2,
-        link: 'linkedin.com/in/spartak-sargsyan-805870249',
+        link: 'https://www.linkedin.com/in/spartak-sargsyan-805870249',
         icon: LuLinkedin,
     },
     {
         id: 3,
-        link: 'instagram.com/sargsyan_s._/',
+        link: 'https://www.instagram.com/sargsyan_s._/',
         icon: LuInstagram,
     },
 ];

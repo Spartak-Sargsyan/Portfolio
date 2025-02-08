@@ -12,9 +12,7 @@
 .lottie-animation {
     position: relative;
     right: -8.5rem;
-    // width: 1020px;
-    // height: 510px;
-    @include size(1020px,510px);
+    @include size(1020px, 510px);
     @include transition(transform, 0.4s, ease-in-out);
     &:hover {
         transform: scale(1.05) rotate(5deg);
@@ -64,7 +62,7 @@
         }
 
         &.gradientText {
-            @include gradientText($gradient);
+            @include gradientText;
         }
     }
 }
@@ -85,7 +83,7 @@
         }
 
         .badge-text {
-            @include gradientText($gradient);
+            @include gradientText;
             @include textFont($m-weight, $s-size);
             display: flex;
             align-items: center;

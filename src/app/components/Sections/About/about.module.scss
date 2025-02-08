@@ -1,0 +1,79 @@
+/** @format */
+
+@use '@styles/variable' as *;
+@use '@styles/mixin' as *;
+@use '@styles/global' as *;
+
+.heading {
+    @include textFont($b-weight, $xs-size-2);
+    color: $white;
+    text-transform: capitalize;
+    line-height: $xl-size;
+    margin-top: 30px;
+    letter-spacing: 3.5px;
+    position: relative;
+
+    @media (min-width: 640px) {
+        font-size: $xm-size;
+    }
+    @media (min-width: 768px) {
+        font-size: $l-size;
+    }
+    @media (min-width: 1280px) {
+        font-size: $m-size;
+        line-height: $xm-size;
+    }
+
+    .headingLine {
+        display: block;
+        margin-top: $s-size-2;
+    }
+
+    .headingWord {
+        position: relative;
+        &.whiteText {
+            color: $white;
+        }
+
+        &.gradientText {
+            @include gradientText;
+        }
+    }
+}
+
+.description {
+    @include textFont($l-weight, $n-size);
+    color: $gray;
+    max-width: 36rem;
+    line-height: 1.625;
+    margin-top: $xs-size-2;
+}
+.btn-box {
+    display: flex;
+    gap: $n-size;
+    .btn {
+        padding: $s-size-2;
+        @include textFont($m-weight, $n-size);
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: $s-size-2;
+        cursor: pointer;
+        text-decoration: none;
+
+        &.btn-cv {
+            background: $gradient;
+            color: $white;
+            border: none;
+            border-radius: $s-size-2;
+        }
+
+        &.btn-project {
+            background: transparent;
+            color: $purple;
+            border: 1px solid $purple;
+            border-radius: $s-size-2;
+        }
+    }
+}
